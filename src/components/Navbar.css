@@ -1,6 +1,6 @@
 #app {
     position: relative; /* Make sure to set position for absolute positioning inside */
-    background-image: url("public/MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
+    background-image: url("public/assets/MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;

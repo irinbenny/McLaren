@@ -134,6 +134,12 @@
       display: flex;
       flex-direction: column;
     }
+    .left-links{
+      font-size: 10px;
+    }
+    .footer-part1 {
+      padding: 73px;
+    }
   }
 
 

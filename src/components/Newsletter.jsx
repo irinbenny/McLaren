@@ -10,8 +10,8 @@ function Newsletter() {
     <div className="para2" style={{marginTop:'80px'}}>
         <p style={{fontFamily:'soho-gothic-pro, Arial, sans-serif',fontSize:'20px'}}>Subscribe to our newsletter to be kept up to date with all the latest McLaren news</p>
         <form className='d-flex' style={{marginTop:'40px'}}>
-            <input type="text" placeholder='Email address' style={{border:'none',outline:'none',backgroundColor:'rgba(224, 219, 219, 0.704)',padding:'15px 50px'}}/>
-            <button style={{backgroundColor:'transparent',border:'1px solid rgba(128, 128, 128, 0.392)',padding:'0.9rem 1rem',fontSize:'12px', marginLeft:'35px',fontWeight:'400'}}>SUBMIT</button>
+            <input  type="text" placeholder='Email address' />
+            <button className='button1'>SUBMIT</button>
         </form>
         <p style={{marginTop:'40px',marginBottom:'120px',fontFamily:'soho-gothic-pro, Arial, sans-serif',fontSize:'14px'}}>You may unscribe from these communications at any time. For information on how to unsubscribe,as well as our privacy pratices and commitment to protecting your privacym please review McLarens Privacy Policy.</p>
     </div>

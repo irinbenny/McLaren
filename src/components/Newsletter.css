@@ -8,10 +8,30 @@
   display: flex;
   flex-direction: column; /* Apply flex-direction to flex containers */
 }
-
+input{
+  border:none;
+  outline:none;
+  background-color:rgba(224, 219, 219, 0.704);
+  padding:15px 50px;
+}
+.button1{
+ background-color:'transparent';
+ border:1px solid rgba(128, 128, 128, 0.392);
+ padding:0.9rem 1rem;
+ font-size:12px;
+ margin-left:35px;
+ font-weight:400;
+}
 @media (max-width: 600px) {
     .main {
       display: flex; /* Change display to flex at smaller screen sizes */
       flex-direction: column;
+    }
+    .button1{
+      margin-left: 5px;
+      padding:0.5rem 0.6rem;
+    }
+    input{
+      padding:10px 30px;
     }
   }
