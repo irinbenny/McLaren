@@ -1,0 +1,86 @@
+/* CSS for small screens */
+.cmp-s300-product-carousel {
+    overflow: hidden; /* Hide the overflow */
+  }
+  .model-heading {
+    font-family: "mclaren-bespoke, 'Courier New', Arial";
+    font-weight: lighter;
+    font-size: 45px;
+    color: #363f45;
+    margin-top: 57px;
+    margin-left: 120px;
+    letter-spacing: 3px;
+  }
+  
+  .model-slider {
+    margin-top: 20px; /* Adjust as needed */
+  }
+  .model-slider img{
+    width:640px;
+    height:270px;
+    margin-left: 380px;
+  }
+
+  .center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; 
+  }
+  
+  .center-align img{
+    height: 60px;
+    width: 400px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .discover-btn {
+    background: linear-gradient(to right, #ff8000, #e85e0f);
+    border: none;
+    border-radius: 60px;
+    box-shadow: rgba(233, 89, 20, 0.6) 0px 12px 24px 0px;
+    padding: 0.9rem 5.4rem;
+    margin-right: 10px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+  
+  .view-all-btn {
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 60px;
+    padding: 0.7rem 4.1rem;
+    color: #363f45;
+    font-size: 12px;
+  }
+  
+  .bar-container {
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 80px;
+  }
+  
+  .bar {
+    height: 5px;
+    border-radius: 20px;
+    float: left;
+  }
+
+
+  @media (max-width: 450px) {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+    }
+    .bar-container {
+      width: 70%;
+    }
+  }

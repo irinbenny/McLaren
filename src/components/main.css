@@ -1,0 +1,35 @@
+.buy{
+    background-color:#14171bf7;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    color:white;
+    height: 300px;
+    place-content: center;
+    margin-top: 40px;
+  }
+  .decoration p{
+    font-family: mclaren-bespoke,Courier New,Arial;
+    font-size: 50px;
+  }
+  .para .texts{
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+    margin-left: 70px;
+    line-height: 30px;
+  }
+  .textss{
+    margin-left: 60px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width:430px){
+    .buy{
+      display:flex;
+      flex-direction: column;
+    }
+    .decoration p{
+      font-size: 20px;
+    }
+}

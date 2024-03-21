@@ -1,0 +1,13 @@
+#EXTM3U
+
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3138916
+
+https://s7mbrstream-g1.scene7.com/hls-vod/mclaren/_media_/0cb/0cb7e9a8-b86b-4ab9-9311-9f5635cd17cd.mp4.m3u8
+
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2101738
+
+https://s7mbrstream-g1.scene7.com/hls-vod/mclaren/_media_/83f/83ff240e-beac-491e-8cdc-562358f07474.mp4.m3u8
+
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=758248
+
+https://s7mbrstream-g1.scene7.com/hls-vod/mclaren/_media_/8a0/8a0b2d61-12c3-4789-8c5f-7945aaff535f.mp4.m3u8

@@ -1,0 +1,17 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+  }
+  .para1,
+.para2 {
+  display: flex;
+  flex-direction: column; /* Apply flex-direction to flex containers */
+}
+
+@media (max-width: 600px) {
+    .main {
+      display: flex; /* Change display to flex at smaller screen sizes */
+      flex-direction: column;
+    }
+  }

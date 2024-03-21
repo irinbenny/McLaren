@@ -1,0 +1,143 @@
+#app {
+    position: relative; /* Make sure to set position for absolute positioning inside */
+    background-image: url("public/MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    
+  }
+ 
+  
+  #app:hover {
+    background-position-x: calc(50% - 40px); /* Move background image left on hover */
+  }
+  .mr-auto img{
+    width: 200px;
+  }
+  .ml-auto{
+    margin-top: 10px;
+  }
+
+  #basic-nav-dropdown{
+    font-size: 13px; 
+    top:5;
+    letter-spacing: 3px;
+    line-height: 20px;
+  }
+   
+  .navbar-custom {
+    background-color: transparent !important;
+    color: white !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-custom .nav-link {
+    color: white !important;
+  }
+  
+.find{
+  background-color:transparent;
+  color:white;
+   font-size:12px;
+   font-weight: bolder;
+   outline:none;
+   border:1px solid white;
+   display: inline-flex;
+   opacity: .75;
+   transition: opacity .2s ease;
+   padding: 8px 10px;
+   align-items: end;
+   margin-right: 30px;
+   letter-spacing: 2px;
+   margin-top: 10px;
+  
+}
+.menu{
+  margin-right: 50px;
+  margin-top: 10px;
+}
+  .bodys {
+    position: absolute; /* Position the text and button relative to #app */
+    top: 40%; /* Center vertically */
+    left:25%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the content */
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  body {
+    font-size: 16px; /* Adjust this value to match your font size */
+    line-height: 1;
+  }
+  .bodys p {
+    color: white;
+    font-weight: 500;
+    margin-left: 0; /* Adjusted margin to be back on the left side */
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys .title {
+    font-size: 28px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    letter-spacing: 0.96px;
+    color: white;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys .subtitle {
+    font-size: 73px;
+    font-family: mclaren-bespoke, "Courier New", Arial;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys button {
+    border-radius: 60px;
+    box-shadow: rgba(233, 89, 20, 0.4) 0px 8px 20px 0px;
+    background: linear-gradient(to right, #ce6f0f, #ff4d00);
+    color: white;
+    padding: 0.9rem 2.9rem;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    margin-left: 0;
+    transition:  transform 0.3s ease; 
+  }
+  
+  #app:hover .bodys {
+    transform: translate(-50%, -50%) ;
+  }
+  
+  #app:hover .bodys p,
+  #app:hover .bodys .title,
+  #app:hover .bodys .subtitle,
+  #app:hover .bodys button {
+    transform: translateX(35px);
+  }
+
+  @media (max-width: 600px) {
+    #app {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-height: 900px; /* Adjust this value as needed */
+    }
+    .bodys .title {
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+     
+  .bodys .subtitle {
+    font-size: 47px;
+  }
+  .bodys {
+    top: 40%; /* Center vertically */
+    left:35%; /* Center horizontally */
+  }
+  .bodys button {
+    padding: 1.2rem 5.9rem;
+  }
+  }
+
+

@@ -1,0 +1,32 @@
+.background-video{
+    position: relative;
+}
+.background-video p{
+    position: absolute;
+    bottom: 400px;
+    left: 50px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 28px;
+    z-index: 1;
+    color: #ffffff;
+}
+.background-video button {
+    position: absolute;
+    bottom: 230px;
+    left: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.392);
+    padding: 0.4rem 1rem;
+    color: #ffffff; /* Corrected color value */
+    font-size: 15px;
+    font-family: 'soho-gothic-pro', Arial, sans-serif; /* Corrected font-family syntax */
+    z-index: 1;
+}
+@media screen and (max-width:430px){
+    .background-video p{
+        bottom: 100px;
+    }
+    .background-video button{
+        bottom: 30px;
+    }
+}

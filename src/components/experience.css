@@ -1,0 +1,34 @@
+.image {
+    position: relative;
+    background-image: url('../public/bg1.webp');
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    background-repeat: no-repeat;
+}
+
+
+.paragraph {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+}
+
+.paragraph p {
+    font-size: 100px;
+    line-height: 1;
+}
+
+.p12{
+   margin-bottom: 0;
+   color:white;
+   font-family:'Courier New", Arial';
+   font-size: 100px;
+}
+
+@media screen and (max-width:430px){
+    .paragraph p {
+        font-size: 30px;
+        line-height: 1;
+    }
+}

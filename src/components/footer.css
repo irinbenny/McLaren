@@ -1,0 +1,139 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.6fr; 
+  background-color: rgb(16, 18, 20);
+  color: #9da8ae;
+}
+
+
+  .footer-part1 {
+    padding: 120px;
+  }
+  
+  .footer-part2 {
+    padding: 120px;
+    background-color: rgb(35, 39, 44);
+    margin-top: 50px;
+
+  }
+  
+  .links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+  }
+
+  .titled{
+    font-family: mclaren-bespoke, "Courier New", Arial;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color:white;
+  }
+  .links-left,
+  .links-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .links-left :hover,
+  .links-right :hover{
+    color: white;
+  }
+  .contact,
+  .follow-us {
+    margin-bottom: 20px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .contact p:hover,
+  .follow-us p:hover{
+    color: white;
+  }
+  .contact h6,
+  .follow-us h6 {
+    margin-bottom: 40px; 
+    color: white;
+  }
+
+  .company-logo {
+    width: 210px;
+    height: 40px; 
+    margin-top: 190px;
+  }
+  
+  .additional-links {
+    display: flex;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+
+  .additional-links p {
+   margin-right: 10px; 
+   font-size: 13px;
+  }
+  .additional-links p:hover{
+    color: white;
+  }
+  .follow-us {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .left-links,
+  .right-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-links p,
+  .right-links p {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .links-left,
+    .links-right {
+      font-size: 10px;
+      line-height: 5px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .additional-links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+

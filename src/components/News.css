@@ -1,0 +1,14 @@
+.views:hover {
+    color: #e95914;
+  }
+.views{
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 20px;
+}
+@media (max-width: 1000px) {
+  .images {
+   display: flex;
+   flex-direction: column;
+  }
+}
