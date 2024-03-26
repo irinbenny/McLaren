@@ -1,83 +1,145 @@
 /* eslint-disable no-unused-vars */
+import React, { useRef, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLessThan, faGreaterThan } from '@fortawesome/free-solid-svg-icons';
+import Card from 'react-bootstrap/Card';
+import { Button } from 'react-bootstrap';
 import './News.css'
-import React from 'react';
 
-function News() {
-  return (
-    <>
-      <div className="news d-flex align-items-center" style={{ marginTop: '190px' }}>
-        <h3 style={{ fontFamily: 'mclaren-bespoke, "Courier New", Arial', fontSize: '50px', color: '#363f45', marginTop: '0', marginLeft: '85px' }}>LATEST NEWS</h3>
-        <button style={{ backgroundColor: 'transparent', border: '1px solid rgba(128, 128, 128, 0.392)', marginLeft: '20px', fontWeight: '600px', padding: '10px 20px', marginBottom: '5px', fontFamily: 'soho-gothic-pro, Arial, sans-serif', color: '#363f44', fontSize: '12px', letterSpacing: '2px' }}>VIEW ALL</button>
-      </div>
+function Shop() {
+    const containerRef = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [clickCount, setClickCount] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-      <div className="images d-flex" >
-        <div className="image-container" style={{ display: 'flex', flexDirection: 'column' }}>
-          <img
-            src="../public/newss.webp"
-            width="337px"
-            height="190px"
-            alt="Car"
-          />
-          <div className="mainss">
-            <h6 style={{marginTop: '40px',fontSize:'18px',lineHeight:'30px' }}>750S-Raising the bar</h6>
-            <p style={{marginTop: '40px',fontSize:'16px',lineHeight:'20px' }}>There are many parallels between<br/>  record-breaking speed skier Simon Billy and the pursuit of  performance <br/>that created the McLaren 750s</p>
-            <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
-          </div>
+    const scrollLeft = () => {
+        if (containerRef.current && clickCount > 0) {
+            setClickCount((prevCount) => prevCount - 1);
+            setScrollPosition((prevPosition) => prevPosition + 25);
+            containerRef.current.style.transform = `translateX(${scrollPosition + 25}%)`;
+            setActiveIndex(activeIndex - 1);
+        }
+    };
+
+    const scrollRight = () => {
+        if (containerRef.current && clickCount < 4) {
+            setClickCount((prevCount) => prevCount + 1);
+            setScrollPosition((prevPosition) => prevPosition - 25);
+            containerRef.current.style.transform = `translateX(${scrollPosition - 25}%)`;
+            setActiveIndex(activeIndex + 1);
+        }
+    };
+
+    return (
+        <>
+        
+        <div className='news-title d-flex justify-content-between align-items-center'>
+            <div className='d-flex covered'>
+                <h3>LATEST NEWS</h3>
+                <div>
+                    <button className='btn1'>VIEW ALL</button>
+                </div>
+            </div>
+            <div className="scroll">
+                <Button style={{ border: '1px solid transparent', backgroundColor: 'white' }} onClick={scrollLeft}><FontAwesomeIcon icon={faLessThan} style={{ color: "black", fontSize: '12px' }} className='me-1' /></Button>
+                <Button style={{ border: '1px solid transparent', backgroundColor: 'white' }} onClick={scrollRight}><FontAwesomeIcon icon={faGreaterThan} style={{ color: "#000000", fontSize: '12px' }} /></Button>
+            </div>
         </div>
 
-        <div className="image-container" style={{ marginLeft: '10px', display: 'flex', flexDirection: 'column' }}>
-          <img
-            src="../public/news1.webp"
-            width="337px"
-            height="190px"
-            alt="Car"
-          />
-          <div className="mainss">
-            <h6 style={{marginTop: '40px',fontSize:'18px',lineHeight:'30px' }}>Like Minds-Simon Billy</h6>
-            <p style={{marginTop: '40px',fontSize:'16px',lineHeight:'20px' }}>The worlds fastest skier on his passion for  <br/>breaking speed barriers, and how the 750S reflects his own  approach to pushing the <br/>limits of performance</p>
-            <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
-          </div>
-        </div>
 
-        <div className="image-container" style={{ marginLeft: '10px', display: 'flex', flexDirection: 'column' }}>
-          <img
-            src="../public/news3.webp"
-            width="337px"
-            height="190px"
-            alt="Car"
-          />
-          <div className="mainss">
-            <h6 style={{marginTop: '40px',fontSize:'18px',lineHeight:'30px' }}>McLaren Trophy is coming to America</h6>
-            <p style={{marginTop: '40px',fontSize:'16px',lineHeight:'20px' }}>Next season, a new chapter of McLaren <br/> Motorsport history will be written, when McLarens one make  race series-McLaren Trophy-launches in America.</p>
-            <p className='views' style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
-          </div>
-        </div>
+                    <div className='slider d-flex mt-5'>
+                    <ul className='slider-container' ref={containerRef}>
+                    
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/newss.webp" className='img1' />
+                            <Card.Body className='cardtext'>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>750S-Raising the bar</Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px'}}>
+                                    There are many parallels between record-breaking speed skier Simon Billy and that is  the pursuit of performance  that created the McLaren 750s
+                                </Card.Text>
+                                <p className='views' style={{ marginTop: '80px', fontWeight: '600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news1.webp" className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Like Minds-Simon Billy</Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                The worlds fastest skier on his passion for breaking speed barriers,  and how the 750S reflects his  own  approach to pushing the of the maximum limits of performance
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news14.webp" className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>McLaren Trophy is coming </Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                Next season, a new chapter of McLaren  Motorsport history will be written, when McLarens one make  race series-McLaren Trophy-launches in America
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news5.webp"  className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Race Bulletin: 04 March 2024</Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                2024 is less three months old but McLaren has already settled into new year of GT racing that will feature a long-awaited return to the FIA  World Endurance Championship
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news11.webp"  className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Artura Spider Performance </Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                McLaren Automotive extends its model range with next generation Artura Spider and bringing open air performance to McLarens first series-production Hybrid supercar
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news12.webp"  className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>McLaren Trophy return 2024</Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                After a thrilling inagural season in 2023,McLarens single-make race series returns this year.with more Artura Trophy cars and ultra-competitive track action
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
+                    <li>
+                        <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
+                            <Card.Img variant="top" src="public/news13.webp"  className='img1'/>
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Like Minds - Anton Molnar</Card.Title>
+                                <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
+                                Hungarian artist Anton creates unique works of art combining classical techniques with modern vision. Anton talks passionately of  wide ranging inspirations.
+                                </Card.Text>
+                                <p className='views'style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
+                            </Card.Body>
+                        </Card>
+                    </li>
 
-        <div className="image-container" style={{ marginLeft: '10px', display: 'flex', flexDirection: 'column' }}>
-          <img
-            src="../public/news5.webp"
-            width="337px"
-            height="190px"
-            alt="Car"
-          />
-          <div className="mainss">
-            <h6 style={{marginTop: '40px',fontSize:'18px',lineHeight:'30px' }}>Race Bulletin: 04 March 2024</h6>
-            <p style={{marginTop: '40px',fontSize:'16px',lineHeight:'20px' }}>2024 is less three months old but<br/> McLaren has already settled into new year of GT racing that will feature a long-awaited return to the FIA  World Endurance Championship</p>
-            <p className='views' style={{marginTop: '80px',fontWeight:'600' }}>VIEW ALL</p>
-          </div>
-        </div>
-
-        <div className="image-container" style={{ display: 'flex', flexDirection: 'column' }}>
-          <img
-            src="../public/car8.png"
-            width="47px"
-            height="195px"
-            alt="Car"
-          />
-        </div>
-      </div>
-    </>
-  );
+                </ul>
+            </div>
+     
+        </>
+    );
 }
 
-export default News;
+export default Shop;

@@ -8,11 +8,11 @@ function Video() {
   <div className="background-video">
     <video autoPlay muted loop style={{ width: '100%', height: 'auto' }}>
       <source src="public/ArtCarRevealPreview-0x720-3000k.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
     </video>
-    <p className='mb-5'>750S WITH</p>
-    <p>3-7-59 THEME</p>
-    <button style={{ }}>DISCOVER</button>
+
+    <p className='mb-5 texteds'>750S WITH</p>
+    <p className='texted'>3-7-59 THEME</p>
+    <button>DISCOVER</button>
   </div>
 </>
   

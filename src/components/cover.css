@@ -19,10 +19,11 @@
    }
   
   .cover-txt{
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: -60px;
   }
-  @media (max-width: 400px) {
+
+  @media (max-width: 600px) {
     .textss{
       font-family:soho-gothic-pro, Arial, sans-serif;
       font-size:18px;
@@ -31,4 +32,18 @@
      font-family:mclaren-bespoke, "Courier New", Arial;
      font-size:50px;
      }
+     .cover{
+      height: 61vh;
+    background-size: 271%;
+     }
+     .cover-txt{
+      margin-top: 80px;
+      margin-left: -20px;
+    }
+    .btn5{
+      width: 13.2rem;
+      height: 1.7rem;
+      margin-bottom: 10px;
+    }
+ 
   }

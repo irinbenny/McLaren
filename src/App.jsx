@@ -18,7 +18,7 @@ function App() {
   <News/>
   <Main/>
   <Video/>
-  <Experience/>
+ <Experience/>
   <Body/>
   <Cover/>
   <Grids/>

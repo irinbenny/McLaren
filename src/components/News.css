@@ -1,22 +1,79 @@
-.mainss{
-  margin-left: 10px;
+.news-title{
+  margin-top: 170px;
+  margin-left:70px;
 }
-.images{
-  margin-left: 80px;
-   margin-top: 20px;
+.news-title h3 {
+  font-family: 'mclaren-bespoke', "Courier New", Arial;
+  font-size: 50px;
+  color: #363f45;
 }
-.views:hover {
-    color: #e95914;
-  }
-.views{
-    cursor: pointer;
-    font-size: 13px;
-    margin-top: 20px;
+.scroll{
+  float: right;
+  margin-right: 60px;
 }
-@media (max-width: 1000px) {
-  .images {
-   display: flex;
-   flex-direction: column;
-   margin-left: 10px;
-  }
+
+.btn1{
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.392);
+  font-weight: 600;
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  font-family: soho-gothic-pro, Arial, sans-serif;
+  color: #363f44;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.img1{
+  height:150px;
+  width:100%;
+  background-size: cover;
+}
+
+.slider {
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect for card movement */
+  width: calc(19rem * 7); /* Width of four cards */
+}
+
+.slider-container li {
+  list-style: none;
+  width: 25rem; 
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+.scroll{
+
+margin-right: 50px;
+display: flex;
+margin-top: 40px;
+}
+.slider{
+  margin-right: 15px;
+}
+.covered{
+  display: flex;
+  flex-direction: column;
+}
+.news-title{
+  margin-left:20px;
+}
+.news-title h3{
+  font-size: 30px;
+}
+
 }

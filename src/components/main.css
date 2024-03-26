@@ -23,13 +23,39 @@
     margin-left: 60px;
     margin-bottom: 30px;
   }
-
-  @media screen and (max-width:430px){
+  .btn3 {
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.392);
+    padding: 0.7rem 1.7rem;
+    color: rgba(255, 255, 255, 0.49);
+    font-size: 15px;
+    text-align: start;
+    margin-left: 70px;
+    margin-top: 25px;
+}
+  @media screen and (max-width:600px){
     .buy{
       display:flex;
       flex-direction: column;
     }
     .decoration p{
       font-size: 20px;
+    }
+    .btn2{
+      margin-left: 40px;
+    }
+    .btn3{
+      padding: 0.7rem 7.7rem;
+      margin-left: 20px;
+    }
+    .para .texts{
+      font-size: 14px;
+      margin-left: 30px;
+    }
+    .texts br {
+      display: none;
+    }
+    .decoration p{
+      margin-left: 30px;
     }
 }

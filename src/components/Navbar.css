@@ -1,10 +1,10 @@
 #app {
     position: relative; /* Make sure to set position for absolute positioning inside */
-    background-image: url("public/assets/MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
+    background-image: url("MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
     background-size: cover;
     height: 100vh;
     width: 100%;
-    
+    transition: background-position-x 0.5s ease;
   }
  
   
@@ -29,10 +29,13 @@
     background-color: transparent !important;
     color: white !important;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+   
   }
-  
+ .buttons{
+  align-items: end;
+  width: 100%;
+  margin-bottom: 10px;
+ }
   .navbar-custom .nav-link {
     color: white !important;
   }
@@ -48,11 +51,9 @@
    opacity: .75;
    transition: opacity .2s ease;
    padding: 8px 10px;
-   align-items: end;
-   margin-right: 30px;
    letter-spacing: 2px;
-   margin-top: 10px;
-  
+  margin-left: 60px;
+  float: right;
 }
 .menu{
   margin-right: 50px;
@@ -116,6 +117,89 @@
     transform: translateX(35px);
   }
 
+  .category .category-button {
+    color: var(--primary-color);
+    display: block;
+    transition: color .3s ease;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-left: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .category .arrow-icon {
+    margin-left: 0.4rem;
+    transition: transform .3s ease;
+    height: 0.3rem;
+    width: 1.2rem;
+  }
+  
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .icon svg {
+    fill: currentColor;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .cta {
+    display: inline-block;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    margin-top: -0.5rem;
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .category .sub-categories {
+    display: none;
+    position: absolute;
+    margin-left: 40px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+   
+  }
+  
+  .category.show .sub-categories {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .sub-categories {
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .offcanvas-body {
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .category-container {
+    position: relative;
+  }
+  .category {
+    margin-top: 20px;
+    position: relative; 
+  }
+  
+
+  
+
+  
   @media (max-width: 600px) {
     #app {
       background-size: cover;
@@ -133,11 +217,91 @@
   }
   .bodys {
     top: 40%; /* Center vertically */
-    left:35%; /* Center horizontally */
+    left:45%; /* Center horizontally */
   }
   .bodys button {
     padding: 1.2rem 5.9rem;
   }
   }
 
+  .offcanvas-body {
+    background-color: transparent; /* Change the background color */
+  }
+  .logo{
+    height: 47px;
+    width: 200px;
+    margin-left: 100px;
+  }
 
+
+
+
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    width: 100%;
+    height:125%;
+    background-color:  rgba(0, 0, 0, 0.5); /* Transparent black */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.button-container {
+    margin-top: 340px;
+}
+.btn15{
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  height:1.8rem;
+  width: 5.8rem;
+}
+.btn12{
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  height:1.8rem;
+  width: 9.8rem;
+}
+.button-container .btn15 {
+    margin: 0 5px;
+}
+/* Show the Model toggle button for small screens */
+@media (min-width: 1220px) {
+  .model-toggle {
+    display: none; /* Initially hide the button */
+  }
+}
+@media (max-width: 600px) {
+  .logo{
+    margin-left: 10px;
+    width: 10px;
+    height: 50px;
+  }
+  .find{
+    display: none;
+  }
+  .autos{
+    margin-top: -100px;
+  }
+  .bodys{
+    left:45%;
+  }
+}

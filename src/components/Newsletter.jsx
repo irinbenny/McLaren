@@ -5,11 +5,11 @@ function Newsletter() {
   return (
    <div className="main">
     <div className="para1">
-        <p style={{marginLeft:'80px',marginTop:'80px',fontFamily:'mclaren-bespoke, "Courier New", Arial',fontSize:'44px'}}>JOIN THE McLAREN FAMILY</p>
+        <p>JOIN THE McLAREN FAMILY</p>
     </div>
     <div className="para2" style={{marginTop:'80px'}}>
-        <p style={{fontFamily:'soho-gothic-pro, Arial, sans-serif',fontSize:'20px'}}>Subscribe to our newsletter to be kept up to date with all the latest McLaren news</p>
-        <form className='d-flex' style={{marginTop:'40px'}}>
+        <p>Subscribe to our newsletter to be kept up to date with all the latest McLaren news</p>
+        <form className='d-flex'>
             <input  type="text" placeholder='Email address' />
             <button className='button1'>SUBMIT</button>
         </form>

@@ -24,10 +24,9 @@
 .content-wrapper {
     position: absolute;
     bottom: 50px;
-    left: 140px; /* Adjusted from 0 to 140px */
-    width: auto; /* Let the content determine the width */
+    left: 140px; 
+    width: auto;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    /* Add any additional styling */
     cursor: pointer;
     transition: bottom 0.5s ease;
 }
@@ -50,7 +49,7 @@
 }
 
 .icon {
-    margin-right: 12px; /* Adjust the margin-right as needed */
+    margin-right: 12px;
 }
 
 .heading:hover + .description {
@@ -59,19 +58,26 @@
 }
 
 .heading:hover {
-    margin-bottom: 20px; /* Adjust the final margin as needed */
+    margin-bottom: 20px; 
 }
 
 
 
 
-@media screen and (max-width:460px){
+@media screen and (max-width:600px){
     .heading{
         font-size: 18px;
+        margin: 3px;
     }
     .total1, .total2, .total3 {
         display: flex;
        flex-direction: column;
     }
- 
+    .description {
+        display: flex;
+        font-size: 8px;
+    }
+    .content-wrapper{
+        left:20px;
+    }
 }

@@ -1,0 +1,82 @@
+.bodymain{
+    background-color: rgb(24, 28, 32);
+    max-height: 140vh;
+}
+.mainbody{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.parts1{
+    margin-top: 160px; 
+    text-align: center;
+}
+.parts1 .p1{
+    font-family: mclaren-bespoke, "Courier New", Arial;
+    color: rgb(255, 255, 255);
+    font-size: 44px;
+}
+.parts1 .p2{
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: start;
+    margin-left: 60px;
+}
+.mainbodys{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 60px;
+}
+.parts2 img{
+    width: 100%;
+    height: 38.5%;
+}
+.parts3 img{
+    width: 100%;
+    height: 77%;
+}
+.parts11{
+    margin-left: 60px;
+}
+.parts11 video{
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .mainbody{
+        display: flex;
+    }
+    .parts1{
+        margin-top: 100px;
+        text-align: start;
+        
+    }
+    .parts1 .p1{
+        font-size: 28px;
+        margin-left: 15px;
+    }
+    .parts1 .p2{
+        margin-left: 16px;
+        margin-top: 38px;
+    }
+    .mainbodys{
+       display: flex;
+       flex-direction: column;
+    }
+    .parts2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .parts2 img{
+        height: 100px;
+    }
+    .parts11{
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+    .parts3 img{
+        height: 200px;
+        margin-bottom: 75px;
+    }
+}
