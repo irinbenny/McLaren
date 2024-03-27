@@ -60,7 +60,6 @@
   
   .model-slider {
     margin-top: 20px; 
-    cursor: none;
   }
 
   .model-slider img{
@@ -68,29 +67,7 @@
     height:270px;
     margin-left: 380px;
   }
-  
-  .custom-cursor {
-    position: absolute; /* Change to absolute */
-    z-index: 9999;
-    width: 40px;
-    height: 40px;
-    background-color: orange;
-    border-radius: 50%;
-    pointer-events: none;
-    display: none;
-  }
-  
-  .custom-cursor p {
-    color: black;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  /* Show the custom cursor when dragging */
-  .model-slider.dragging .custom-cursor {
-    display: block;
-  }
+
 
   .center-align {
     display: flex;

@@ -11,7 +11,7 @@ function Experience() {
           <p className='p12'>CIRCUIT OF</p>
           <p  className='p12'>THE</p>
           <p className='p12'>AMERICAS</p>
-          <button style={{ backgroundColor: 'transparent', border:'1px solid rgba(128, 128, 128, 0.392)',fontFamily:'soho-gothic-pro, Arial, sans-serif',color:'#fff',fontSize:'12px',letterSpacing:'2px' }}>DISCOVER</button>
+          <button style={{ backgroundColor: 'transparent', border:'1px solid rgba(128, 128, 128, 0.392)',fontFamily:'soho-gothic-pro, Arial, sans-serif',color:'#fff',fontSize:'12px',letterSpacing:'2px',padding:'0.7rem 1.2rem',marginTop:'25px' }}>DISCOVER</button>
         </div>
       </div>
     </>

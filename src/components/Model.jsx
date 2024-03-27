@@ -5,6 +5,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './model.css';
 import car from '../assets/car1.png';
+import car1 from '../assets/car2.png';
+import car2 from '../assets/car3.png';
+import text from '../assets/text.png';
 
 function Model() {
   const sliderRef = useRef(null);
@@ -49,15 +52,15 @@ function Model() {
           <img src={car} alt="Slide 1" />
         </div>
         <div>
-          <img src="src/assets/car2.png" alt="Slide 2" />
+          <img src={car1} alt="Slide 2" />
         </div>
         <div>
-          <img src="src/assets/car3.png" alt="Slide 3" />
+          <img src={car2} alt="Slide 3" />
         </div>
       </Slider>
 
       <div className="center-align">
-        <img src="src/assets/text.png" alt="Car" />
+        <img src={text} alt="Car" />
       </div>
 
       <div className="buttons2">
@@ -70,13 +73,6 @@ function Model() {
         <div className="bar" style={{ width: '80%', backgroundColor: '#ccc' }}></div>
       </div>
 
-      {/* Custom Cursor */}
-      <div
-        className="custom-cursor"
-        style={{ left: cursorPos.x - 20, top: cursorPos.y - 20 }}
-      >
-        <p>Drag</p>
-      </div>
     </div>
   );
 }

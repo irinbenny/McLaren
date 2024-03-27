@@ -52,7 +52,7 @@ function Shop() {
                     
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/newss.webp" className='img1' />
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/McL750S_Road_Front3_4_A_Final:crop-16x9?wid=480&hei=270" className='img1' />
                             <Card.Body className='cardtext'>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>750S-Raising the bar</Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px'}}>
@@ -64,7 +64,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news1.webp" className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/750S%20x%20Simon%20Billy%2006%20Crop:crop-16x9?wid=480&hei=270" className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Like Minds-Simon Billy</Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
@@ -76,7 +76,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news14.webp" className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/McLaren%20Trophy%20America%20main:crop-16x9?wid=480&hei=270" className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>McLaren Trophy is coming </Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
@@ -88,7 +88,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news5.webp"  className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/00001996_0119:crop-16x9?wid=480&hei=270"  className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Race Bulletin: 04 March 2024</Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
@@ -100,7 +100,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news11.webp"  className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/MCLAREN_ARTURA_SPIDER_HERO_REAR_34_HIGH-3:crop-16x9?wid=480&hei=270"  className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Artura Spider Performance </Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
@@ -112,7 +112,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news12.webp"  className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/McLaren-Trophy-AP-Season-1-Rd5-6-Nurburgring-245071:crop-16x9?wid=480&hei=270"  className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>McLaren Trophy return 2024</Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>
@@ -124,7 +124,7 @@ function Shop() {
                     </li>
                     <li>
                         <Card style={{ width: '22rem', border: '2px solid transparent' }} className='p-2'>
-                            <Card.Img variant="top" src="public/news13.webp"  className='img1'/>
+                            <Card.Img variant="top" src="https://mclaren.scene7.com/is/image/mclaren/424_NSTAR_MCLN_ART_REVEAL_0327:crop-16x9?wid=480&hei=270"  className='img1'/>
                             <Card.Body>
                                 <Card.Title style={{ fontWeight: 550, fontSize: '18px',marginTop:'20px' }}>Like Minds - Anton Molnar</Card.Title>
                                 <Card.Text style={{ fontSize: '15px',marginTop:'40px' }}>

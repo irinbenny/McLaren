@@ -11,6 +11,66 @@
   #app:hover {
     background-position-x: calc(50% - 40px); /* Move background image left on hover */
   }
+
+  .bodys {
+    position: absolute; /* Position the text and button relative to #app */
+    top: 40%; /* Center vertically */
+    left:25%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the content */
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  body {
+    font-size: 16px; /* Adjust this value to match your font size */
+    line-height: 1;
+  }
+  .bodys p {
+    color: white;
+    font-weight: 500;
+    margin-left: 0; /* Adjusted margin to be back on the left side */
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys .title {
+    font-size: 28px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    letter-spacing: 0.96px;
+    color: white;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys .subtitle {
+    font-size: 73px;
+    font-family: mclaren-bespoke, "Courier New", Arial;
+    transition: transform 0.3s ease; /* Adding transition for smooth animation */
+  }
+  
+  .bodys button {
+    border-radius: 60px;
+    box-shadow: rgba(233, 89, 20, 0.4) 0px 8px 20px 0px;
+    background: linear-gradient(to right, #ce6f0f, #ff4d00);
+    color: white;
+    padding: 0.9rem 2.9rem;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    margin-left: 0;
+    transition:  transform 0.3s ease; 
+  }
+  
+  #app:hover .bodys {
+    transform: translate(-50%, -50%) ;
+  }
+  
+  #app:hover .bodys p,
+  #app:hover .bodys .title,
+  #app:hover .bodys .subtitle,
+  #app:hover .bodys button {
+    transform: translateX(35px);
+  }
+
+
   .mr-auto img{
     width: 200px;
   }
@@ -75,85 +135,77 @@
     height: 12px;
     margin-left: 6px;
 }
-.bodys {
-    position: absolute; /* Position the text and button relative to #app */
-    top: 40%; /* Center vertically */
-    left:25%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the content */
-    transition: transform 0.3s ease; /* Adding transition for smooth animation */
-  }
-  body {
-    font-size: 16px; /* Adjust this value to match your font size */
-    line-height: 1;
-  }
-  .bodys p {
-    color: white;
-    font-weight: 500;
-    margin-left: 0; /* Adjusted margin to be back on the left side */
-    transition: transform 0.3s ease; /* Adding transition for smooth animation */
-  }
-  
-  .bodys .title {
-    font-size: 28px;
-    font-family: soho-gothic-pro, Arial, sans-serif;
-    letter-spacing: 0.96px;
-    color: white;
-    transition: transform 0.3s ease; /* Adding transition for smooth animation */
-  }
-  
-  .bodys .subtitle {
-    font-size: 73px;
-    font-family: mclaren-bespoke, "Courier New", Arial;
-    transition: transform 0.3s ease; /* Adding transition for smooth animation */
-  }
-  
-  .bodys button {
-    border-radius: 60px;
-    box-shadow: rgba(233, 89, 20, 0.4) 0px 8px 20px 0px;
-    background: linear-gradient(to right, #ce6f0f, #ff4d00);
-    color: white;
-    padding: 0.9rem 2.9rem;
-    border: none;
-    outline: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-family: soho-gothic-pro, Arial, sans-serif;
-    margin-left: 0;
-    transition:  transform 0.3s ease; 
-  }
-  
-  #app:hover .bodys {
-    transform: translate(-50%, -50%) ;
-  }
-  
-  #app:hover .bodys p,
-  #app:hover .bodys .title,
-  #app:hover .bodys .subtitle,
-  #app:hover .bodys button {
-    transform: translateX(35px);
-  }
 
   .offcanvas-bodys{
     margin-top: 20px;
   }
-  .category .category-button {
-    color: var(--primary-color);
-    display: block;
-    transition: color .3s ease;
-    outline: none;
-    border: none;
+  
+  .AccordionHeader {
     background-color: transparent;
-    margin-left: 21px;
-    font-size: 1.2rem;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    width: 70%;
+  }
+  .accordion-button:hover{
+    color:rgb(69, 19, 19)
+  }
+  .accordion-item .accordion-header .accordion-button{
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+
+  .items{
+    background-color: transparent;
+    border: none;
+  }
+
+
+  .AccordionBody {
+    background-color:transparent;
+    padding: 10px;
+    border-top: none; 
+    color: white;
+  }
+  .sub-categories {
+    padding-left: 20px;
   }
   
-  .category .arrow-icon {
-    margin-left: 0.4rem;
-    transition: transform .3s ease;
-    height: 0.3rem;
-    width: 1.2rem;
+  .sub-category {
+    display: block;
+    padding: 5px 0;
+    color: white;
+    text-decoration: none;
   }
   
+  .offcanvas-body {
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .category-container {
+    position: relative;
+  }
+  .category {
+    margin-top: 20px;
+    margin-left: 30px;
+    position: relative; 
+  }
+  .line{
+    background-color:#78838a;
+    margin-left: 43px;
+    height: 1px;
+    margin-bottom: 2rem;
+    width: 2.5rem;
+  }
+  .category-button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+  }
   .icon {
     display: inline-block;
     vertical-align: middle;
@@ -193,7 +245,7 @@
    
   }
   
-  .category.show .sub-categories {
+  .sub-categories {
     display: block;
     opacity: 1;
     transform: translateY(0);
@@ -203,25 +255,13 @@
     border-radius: 4px;
   }
   
+
+
   .offcanvas-body {
     padding: 0;
     overflow: hidden;
   }
   
-  .category-container {
-    position: relative;
-  }
-  .category {
-    margin-top: 20px;
-    position: relative; 
-  }
-  .line{
-    background-color:#78838a;
-    margin-left: 23px;
-    height: 1px;
-    margin-bottom: 2rem;
-    width: 2.5rem;
-  }
   .offcanvas-body {
     background-color: transparent; /* Change the background color */
   }
@@ -280,6 +320,7 @@
   height: 110px;
   width: 200px;
 }
+
 
 @media (min-width: 1220px) {
   .model-toggle {

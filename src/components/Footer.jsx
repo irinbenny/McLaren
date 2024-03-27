@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import './footer.css';
-
+import logo from '../assets/logo1.png'
 function Footer() {
   return (
     <div className="footer">
       <div className="footer-part1">
-        {/* Content for the first part of the footer */}
+
         <h6 className='titled'>McLAREN CORPORATE</h6>
         <div className="links-container">
           <div className="links-left">
@@ -20,9 +20,9 @@ function Footer() {
             <p>McLAREN Racing</p>
           </div>
         </div>
-        {/* Logo and additional links */}
+
         <div className="footer-part1-bottom">
-          <img src="logo1.png" alt="Company Logo" className="company-logo" />
+          <img src={logo} alt="Company Logo" className="company-logo" />
           <div className="additional-links">
             <p>COOKIE POLICY</p>
             <p>GENDER GAP REPORT</p>
@@ -33,7 +33,6 @@ function Footer() {
         </div>
       </div>
       <div className="footer-part2">
-        {/* Content for the second part of the footer */}
         <div className="contact">
           <h6>CONTACT</h6>
           <p>Contact Us</p>

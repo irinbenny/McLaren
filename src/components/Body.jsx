@@ -4,6 +4,10 @@ import './Body.css';
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
+import video from '../assets/Overview_Page_Hero_Preview-0x720-3000k.mp4';
+import img1 from '../assets/i1.jpg';
+import img2 from '../assets/i1.jpg';
+import img3 from '../assets/i2.jpg';
 
 function Body() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -33,23 +37,23 @@ function Body() {
         <div className="mainbodys">
           <div className="parts11">
             <video autoPlay muted loop id="myVideo"  ref={videoRef} >
-             <source  src="public/Overview_Page_Hero_Preview-0x720-3000k.mp4"/>
+             <source  src={video}/>
             </video>
           </div>
 
           <div className="parts2">
-            <img src="public/i3.jpg" alt="Photo 1" />
-            <img src="public/i1.jpg" alt="Photo 2" />
+            <img src={img1} alt="Photo 1" />
+            <img src={img3} alt="Photo 2" />
           </div>
 
           <div className="parts3">
-            <img src="public/i2.jpg" alt="Photo 3" />
+            <img src={img2} alt="Photo 3" />
           </div>
 
           {/* Play/Pause Button */}
           <div className="playpause position-absolute end-0" style={{marginTop: '400px',marginRight:'70px'}}>
-            <Button className='play bg-transparent' style={{ border: '2px solid white', zIndex: '1',borderRadius:'45px' }} size="lg" onClick={handlePlayPause}>
-              <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} style={{ color: 'white', fontSize: '20px' }} className='icon' />
+            <Button className='play bg-transparent' size="lg" onClick={handlePlayPause}>
+              <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} style={{ color: 'white', fontSize: '16px',marginRight:'-1px' }} className='icon' />
             </Button>
           </div>
         </div>

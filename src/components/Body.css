@@ -43,6 +43,11 @@
 .parts11 video{
     width: 100%;
 }
+.play{
+    border: 2px solid white;
+    z-index: 1;
+    border-radius: 45px;
+}
 @media (max-width: 600px) {
     .mainbody{
         display: flex;
@@ -78,5 +83,8 @@
     .parts3 img{
         height: 200px;
         margin-bottom: 75px;
+    }
+    .play{
+        margin-top: 151px;
     }
 }
