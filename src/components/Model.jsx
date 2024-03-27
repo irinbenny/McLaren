@@ -49,15 +49,15 @@ function Model() {
           <img src={car} alt="Slide 1" />
         </div>
         <div>
-          <img src="public/car2.png" alt="Slide 2" />
+          <img src="src/assets/car2.png" alt="Slide 2" />
         </div>
         <div>
-          <img src="public/car3.png" alt="Slide 3" />
+          <img src="src/assets/car3.png" alt="Slide 3" />
         </div>
       </Slider>
 
       <div className="center-align">
-        <img src="../public/text.png" alt="Car" />
+        <img src="src/assets/text.png" alt="Car" />
       </div>
 
       <div className="buttons2">

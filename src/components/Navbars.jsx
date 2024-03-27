@@ -6,8 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
-
+import logo from '../assets/logo1.png'
+import car2 from '../assets/o3.png'
+import car3 from '../assets/o4.png'
 
 function Navbars() {
 
@@ -103,7 +104,7 @@ function Navbars() {
         <div className="navbar-container">
           <Navbar expand="lg" className="navbar-custom d-flex" style={{ backgroundColor: 'transparent' }}>
           <div className="d-flex align-items-center">
-          <Navbar.Brand href="#home" className="mr-auto logos"> <img src="public/logo.png" alt="" className="logo"/></Navbar.Brand>
+          <Navbar.Brand href="#home" className=" logos"> <img src="src/assets/logo.png" alt="" className="logo"/></Navbar.Brand>
             {isMobile ? (
             <Button className='model-toggle d-flex pt-3' onClick={handleShowModel}  style={{ backgroundColor: 'transparent', border: 'none'}}>
               MODEL
@@ -142,7 +143,7 @@ function Navbars() {
               style={{ backgroundColor: '#363f44', border: 'none',height:'800px' }}
             >
               <Offcanvas.Header closeButton>
-              <img src="public/logo1.png" alt="" />
+              <img src="src/assets/logo.png" alt="" />
               </Offcanvas.Header>
               <Offcanvas.Body className="offcanvas-body">
               <div className='d-flex text-white'>
@@ -157,17 +158,17 @@ function Navbars() {
               </div>
               <div className='d-flex text-white'>
               <div>
-              <img src="public/o3.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
+              <img src={car2} alt="cars" className='me-3 pt-5 carrs'/>
               <p style={{textAlign:'center',marginTop:'10px',marginRight:'40px'}}>75OS</p>
               </div>
               <div>
-              <img src="public/o4.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
+              <img src={car3} alt="cars" className='me-5 pt-5 carrs '/>
               <p style={{textAlign:'center',marginTop:'10px',marginRight:'40px'}}>75OS SPIDER</p>
               </div>
               </div>
               <div>
               <div>
-              <img src="https://mclaren.scene7.com/is/image/mclaren/View_All_Models_Car_Image?fmt=png-alpha&amp;wid=230" alt="cars" style={{marginTop:'70px'}}/>
+              <img src="https://mclaren.scene7.com/is/image/mclaren/View_All_Models_Car_Image?fmt=png-alpha&amp;wid=190" alt="cars" style={{marginTop:'40px'}}/>
               <p style={{marginTop:'10px',marginLeft:'59px',color:'white'}}>ALL MODELS</p>
               </div>
               </div>
@@ -176,19 +177,29 @@ function Navbars() {
       </Offcanvas>
       </div>
 
-      <Offcanvas show={showOffcanvasSUPERCARS} onHide={() => setShowOffcanvasSUPERCARS(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none' ,height:'450px'}}>
+ 
+        
+        <Offcanvas show={showOffcanvasSUPERCARS} onHide={() => setShowOffcanvasSUPERCARS(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none',height:'400px' }}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>
-            <img src="public/logo1.png" alt="" />
+        <Offcanvas.Title style={{marginLeft:'60px'}}>
+            <img src={logo} alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body >
-      <div className="cars d-flex" style={{marginLeft:'160px'}}>
-        <div  className="image-container">
-          <img src="https://mclaren.scene7.com/is/image/mclaren/P16_AR_SideRender-jelly?fmt=png-alpha&wid=230" alt="cars" className='me-5 pt-5'/>
-          
-          <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>ARTURA</p>
-          <div class="overlay">
+        <Offcanvas.Body style={{marginLeft:'100px'}} className='d-flex'>
+        <div className="image-container">
+        <img src="https://mclaren.scene7.com/is/image/mclaren/P16_AR_SideRender-jelly?fmt=png-alpha&wid=230" alt="cars" className='me-5 pt-5'/>
+        <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>ARTURA</p>
+        <div class="overlay">
+          <div class="button-container">
+          <button className='btn15'>DISCOVER</button>
+          <button className='btn15'>CONFIGURE</button>
+          </div>
+        </div>
+        </div>
+        <div className="image-container">
+        <img src="https://mclaren.scene7.com/is/image/mclaren/ML_P16S_preview_v2?fmt=png-alpha&wid=230" alt="cars" className='me-5 pt-5'/>
+        <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>ARTURA SPIDER</p>
+        <div class="overlay">
           <div class="button-container">
           <button className='btn15'>DISCOVER</button>
           <button className='btn15'>CONFIGURE</button>
@@ -196,37 +207,22 @@ function Navbars() {
         </div>
         </div>
         <div className="image-container">
-          <img src="https://mclaren.scene7.com/is/image/mclaren/ML_P16S_preview_v2?fmt=png-alpha&wid=230" alt="cars" className='me-5 pt-5'/>
-          <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>ARTURA SPIDER</p>
-          <div class="overlay">
-          <div class="button-container">
-                <button className='btn15'>DISCOVER</button>
-                <button className='btn15'>CONFIGURE</button>
-            </div>
-        </div>
-        </div>
-        <div className="image-container ">
-          <img src="public/o3.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
-          <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>75OS</p>
-        </div>
-        <div>
-         <img src="public/o4.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
-         <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>75OS SPIDER</p>
-         <div class="overlay">
+        <img src="public/o3.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
+        <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>75OS</p>
+        <div class="overlay">
           <div class="button-container">
           <button className='btn15'>DISCOVER</button>
           <button className='btn15'>CONFIGURE</button>
             </div>
         </div>
         </div>
-        </div>
-
         <div className="image-container">
-         <img src="https://mclaren.scene7.com/is/image/mclaren/View_All_Models_Car_Image?fmt=png-alpha&amp;wid=230" alt="cars" style={{marginLeft:'160px',marginTop:'70px'}}/>
-         <p className='pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px',marginLeft:'210px'}}>ALL MODELS</p>
-         <div class="overlay">
+        <img src="public/o4.png" alt="cars" style={{height:'110px',width:'200px'}} className='me-5 pt-5'/>
+        <p className='text-center me-5 pt-4 text-white' style={{fontSize:'14px',fontWeight:'600',letterSpacing:'1.5px'}}>75OS SPIDER</p>
+        <div class="overlay">
           <div class="button-container">
-          <button className='btn12'>DISCOVER</button>
+          <button className='btn15'>DISCOVER</button>
+          <button className='btn15'>CONFIGURE</button>
             </div>
         </div>
         </div>
@@ -235,7 +231,7 @@ function Navbars() {
       <Offcanvas show={showOffcanvasGTS} onHide={() => setShowOffcanvasGTS(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none',height:'400px' }}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title style={{marginLeft:'60px'}}>
-            <img src="public/logo1.png" alt="" />
+            <img src={logo} alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{marginLeft:'160px'}} className='d-flex'>
@@ -263,7 +259,7 @@ function Navbars() {
       <Offcanvas show={showOffcanvasULTIMATE} onHide={() => setShowOffcanvasULTIMATE(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none' ,height:'450px'}}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title style={{marginLeft:'60px'}}>
-            <img src="public/logo1.png" alt="" />
+        <img src={logo} alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
@@ -324,7 +320,7 @@ function Navbars() {
       <Offcanvas show={showOffcanvasSOLUSGT} onHide={() => setShowOffcanvasSOLUSGT(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none',height:'400px' }}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title style={{marginLeft:'60px'}}>
-            <img src="public/logo1.png" alt="" />
+        <img src={logo} alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{marginLeft:'160px'}} className='d-flex'>
@@ -352,7 +348,7 @@ function Navbars() {
       <Offcanvas show={showOffcanvasLEGACY} onHide={() => setShowOffcanvasLEGACY(false)} placement="top" style={{ backgroundColor: '#363f44', border: 'none' ,height:'400px'}}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title style={{marginLeft:'60px'}}>
-            <img src="public/logo1.png" alt="" />
+        <img src={logo} alt="" />
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body style={{marginLeft:'160px'}} className='d-flex'>
@@ -378,14 +374,14 @@ function Navbars() {
         </div>
         </Offcanvas.Body>
       </Offcanvas>
-    <div className='buttons'>
-      <Button className='find ms-auto'>FIND A RETAILER</Button>
 
-      <Button className="ms-auto autos  pt-2" style={{ backgroundColor: 'transparent', border: 'none'}} onClick={handleShowMenu}>
+    <div className='buttons'>
+    <Button className="  pt-2 justify-content-end" style={{ backgroundColor: 'transparent', border: 'none',float:'right'}} onClick={handleShowMenu}>
         <FontAwesomeIcon icon={faBars} className='menu fa-xl' onClick={handleShowMenu} />
-      </Button>
-      </div>
-    </Navbar>
+    </Button>
+    <Button className='find '>FIND A RETAILER</Button>
+    </div>
+  </Navbar>
 
 
   <Offcanvas
@@ -394,9 +390,17 @@ function Navbars() {
   onHide={handleCloseMenu}
   style={{ backgroundColor: '#363f44', border: 'none' }} 
 >
-  <Offcanvas.Header closeButton>
-  </Offcanvas.Header>
-  <Offcanvas.Body className="offcanvas-body text-white"> 
+<Offcanvas.Header style={{justifyContent:'space-between'}}>
+  <img src="src/assets/logo1.png" alt="" style={{height:'39px',width:'126px'}}/>
+  <div>
+  <button className="close-button" onClick={handleCloseMenu}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 20" class="small-svg">
+      <path d="M16.4 10l8.3-8.3a1 1 0 000-1.4 1 1 0 00-1.4 0L14.6 9h-4.2L1.7.3A1 1 0 00.3.3a1 1 0 000 1.4L8.6 10 .3 18.3a1 1 0 000 1.4 1 1 0 001.4 0l8.7-8.7h4.2l8.7 8.7a1 1 0 001.4 0 1 1 0 000-1.4z" fill="#fff" fillRule="evenodd"></path>
+    </svg>
+  </button>
+  </div>
+</Offcanvas.Header>
+  <Offcanvas.Body className="offcanvas-bodys text-white"> 
    <div className={`offcanvas-body ${showOffcanvasMenu ? 'show-menu' : ''}`}>
       <div className={`category ${openCategory === 'bespoke' ? 'show' : ''}`}>
         <button className="category-button" onClick={() => toggleSubcategories('bespoke')}>
@@ -471,6 +475,45 @@ function Navbars() {
             <a href="#" className="sub-category cta" target="_self">MODELS</a>
           </div>
         )}
+      </div>
+      <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+        LATEST NEWS
+        </button>
+      </div>
+      <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+          WORLD OF McLAREN
+        </button>
+      </div>
+
+
+      <div className="general" style={{marginTop:'70px'}}>
+      <div className="line"></div>
+      <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+          FIND A RETAILER
+          <span class="icon xs-svg" data-component="icon" data-icon="arrow-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.7 11.7"><path d="M8.3 0H2.2a1 1 0 100 2h5.3l.4.4L0 10.3l1.4 1.4 7.9-7.9.4.4v5.3a1.1 1.1 0 001 1 1 1 0 001-1V3.4z"></path></svg></span>
+        </button>
+      </div>
+      <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+          PRE-OWNED
+          <span class="icon xs-svg" data-component="icon" data-icon="arrow-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.7 11.7"><path d="M8.3 0H2.2a1 1 0 100 2h5.3l.4.4L0 10.3l1.4 1.4 7.9-7.9.4.4v5.3a1.1 1.1 0 001 1 1 1 0 001-1V3.4z"></path></svg></span>
+        </button>
+      </div>
+      <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+          ENQUIRY
+          <span class="icon xs-svg" data-component="icon" data-icon="arrow-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.7 11.7"><path d="M8.3 0H2.2a1 1 0 100 2h5.3l.4.4L0 10.3l1.4 1.4 7.9-7.9.4.4v5.3a1.1 1.1 0 001 1 1 1 0 001-1V3.4z"></path></svg></span>
+        </button>
+        <div className={`category ${openCategory === 'motorsport' ? 'show' : ''}`}>
+        <button className="category-button" onClick={() =>toggleSubcategories('motorsport')}>
+          McLAREN STORE
+          <span class="icon xs-svg" data-component="icon" data-icon="arrow-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.7 11.7"><path d="M8.3 0H2.2a1 1 0 100 2h5.3l.4.4L0 10.3l1.4 1.4 7.9-7.9.4.4v5.3a1.1 1.1 0 001 1 1 1 0 001-1V3.4z"></path></svg></span>
+        </button>
+      </div>
+      </div>
       </div>
       </div>
     </Offcanvas.Body>

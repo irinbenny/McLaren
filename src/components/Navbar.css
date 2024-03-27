@@ -1,11 +1,11 @@
 #app {
-    position: relative; /* Make sure to set position for absolute positioning inside */
-    background-image: url("MCLAREN_ARTURA_SPIDER_HERO_REAR_34_LOW_HOME.jpg");
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    transition: background-position-x 0.5s ease;
-  }
+  position: relative; 
+  background-image: url('../assets/home.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  transition: background-position-x 0.5s ease;
+}
  
   
   #app:hover {
@@ -29,16 +29,17 @@
     background-color: transparent !important;
     color: white !important;
     display: flex;
-   
   }
+
  .buttons{
-  align-items: end;
   width: 100%;
-  margin-bottom: 10px;
+  margin-top:10px;
+  margin-right: 60px;
  }
-  .navbar-custom .nav-link {
+
+.navbar-custom .nav-link {
     color: white !important;
-  }
+}
   
 .find{
   background-color:transparent;
@@ -52,14 +53,29 @@
    transition: opacity .2s ease;
    padding: 8px 10px;
    letter-spacing: 2px;
-  margin-left: 60px;
+   margin-top: 10px;
   float: right;
+  margin-right: 10px;
 }
 .menu{
-  margin-right: 50px;
   margin-top: 10px;
+  font-size: 20px;
 }
-  .bodys {
+.close-button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.small-svg {
+  width: 35px;
+  height: 20px;
+}
+.xs-svg{
+  width: 21px;
+    height: 12px;
+    margin-left: 6px;
+}
+.bodys {
     position: absolute; /* Position the text and button relative to #app */
     top: 40%; /* Center vertically */
     left:25%; /* Center horizontally */
@@ -117,6 +133,9 @@
     transform: translateX(35px);
   }
 
+  .offcanvas-bodys{
+    margin-top: 20px;
+  }
   .category .category-button {
     color: var(--primary-color);
     display: block;
@@ -124,8 +143,8 @@
     outline: none;
     border: none;
     background-color: transparent;
-    margin-left: 40px;
-    font-size: 1.5rem;
+    margin-left: 21px;
+    font-size: 1.2rem;
   }
   
   .category .arrow-icon {
@@ -163,13 +182,14 @@
   .category .sub-categories {
     display: none;
     position: absolute;
-    margin-left: 40px;
+    margin-left: 21px;
     width: 100%;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0;
     transform: translateY(10px);
+    height: 400px;
    
   }
   
@@ -195,47 +215,22 @@
     margin-top: 20px;
     position: relative; 
   }
-  
-
-  
-
-  
-  @media (max-width: 600px) {
-    #app {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      max-height: 900px; /* Adjust this value as needed */
-    }
-    .bodys .title {
-      font-size: 14px;
-      letter-spacing: 0.3px;
-    }
-     
-  .bodys .subtitle {
-    font-size: 47px;
+  .line{
+    background-color:#78838a;
+    margin-left: 23px;
+    height: 1px;
+    margin-bottom: 2rem;
+    width: 2.5rem;
   }
-  .bodys {
-    top: 40%; /* Center vertically */
-    left:45%; /* Center horizontally */
-  }
-  .bodys button {
-    padding: 1.2rem 5.9rem;
-  }
-  }
-
   .offcanvas-body {
     background-color: transparent; /* Change the background color */
   }
+  
   .logo{
     height: 47px;
     width: 200px;
     margin-left: 100px;
   }
-
-
-
-
 
   .image-container {
     position: relative;
@@ -248,9 +243,9 @@
     left: 0;
     width: 100%;
     height:125%;
-    background-color:  rgba(0, 0, 0, 0.5); /* Transparent black */
-    opacity: 0; /* Initially transparent */
-    transition: opacity 0.3s; /* Smooth transition */
+    background-color:  rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.3s; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,7 +253,7 @@
 }
 
 .image-container:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1; 
 }
 
 .button-container {
@@ -271,6 +266,7 @@
   border: 1px solid rgba(128, 128, 128, 0.6);
   height:1.8rem;
   width: 5.8rem;
+  margin: 0 5px;
 }
 .btn12{
   outline: none;
@@ -280,20 +276,21 @@
   height:1.8rem;
   width: 9.8rem;
 }
-.button-container .btn15 {
-    margin: 0 5px;
+.cars{
+  height: 110px;
+  width: 200px;
 }
-/* Show the Model toggle button for small screens */
+
 @media (min-width: 1220px) {
   .model-toggle {
-    display: none; /* Initially hide the button */
+    display: none;
   }
 }
 @media (max-width: 600px) {
   .logo{
     margin-left: 10px;
-    width: 10px;
-    height: 50px;
+    width: 146px;
+    height: 36px;
   }
   .find{
     display: none;
@@ -301,7 +298,39 @@
   .autos{
     margin-top: -100px;
   }
-  .bodys{
-    left:45%;
+  .buttons{
+    margin-right: 25px;
+    width: 10%;
   }
-}
+  .menu{
+    margin-bottom: 11px;
+  }
+  #app {
+    background-repeat: no-repeat;
+    background-image: url('../assets/res.home.jpg');
+  }
+  .bodys .title {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  .bodys .subtitle {
+  font-size: 41px;
+  width: 320px;
+  height:96px;
+  }
+  .bodys {
+    top: 31%;
+    left: 49%;
+  }
+  .bodys button {
+    padding: 1.2rem 5.9rem;
+  }
+  .pt-5 {
+    padding-top: 3rem !important;
+    width: 107%;
+  }
+  .carrs{
+    width:178px;
+    height: 85px;
+  }
+  }
