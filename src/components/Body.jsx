@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 import video from '../assets/Overview_Page_Hero_Preview-0x720-3000k.mp4';
 import img1 from '../assets/i1.jpg';
-import img2 from '../assets/i1.jpg';
-import img3 from '../assets/i2.jpg';
+import img3 from '../assets/i3.jpg';
+import img2 from '../assets/grid.jpg';
 
 function Body() {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -42,8 +42,8 @@ function Body() {
           </div>
 
           <div className="parts2">
-            <img src={img1} alt="Photo 1" />
-            <img src={img3} alt="Photo 2" />
+            <img src={img3} alt="Photo 1" />
+            <img src={img1} alt="Photo 2" />
           </div>
 
           <div className="parts3">

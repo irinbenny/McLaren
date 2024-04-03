@@ -3,6 +3,7 @@ import React from 'react'
 import './grids.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faGreaterThan } from '@fortawesome/free-solid-svg-icons';
+
 function Grids() {
   return (
     <>
