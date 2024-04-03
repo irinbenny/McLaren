@@ -7,8 +7,8 @@ function Video() {
 
     <>
   <div className="background-video">
-    <video autoPlay muted loop style={{ width: '100%', height: 'auto' }}>
-    <source src={video} type="video/mp4" />
+    <video autoPlay muted loop>
+    <source src={video} type="video/mp4"/>
         Your browser does not support the video tag.
       </video>
 

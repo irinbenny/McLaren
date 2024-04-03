@@ -70,7 +70,6 @@
     transform: translateX(35px);
   }
 
-
   .mr-auto img{
     width: 200px;
   }
@@ -275,6 +274,7 @@
   .image-container {
     position: relative;
     display: inline-block;
+    color: linear-gradient(196deg ,#181c20, #363f44 );
 }
 
 .overlay {
@@ -355,7 +355,7 @@
     letter-spacing: 0.3px;
   }
   .bodys .subtitle {
-  font-size: 41px;
+  font-size: 37px;
   width: 320px;
   height:96px;
   }

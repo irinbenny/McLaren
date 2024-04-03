@@ -70,7 +70,22 @@ function Navbars() {
     };
   }, []);
 
+  //to have background color to navbar
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
  
   const [openCategory, setOpenCategory] = useState(null);
@@ -89,11 +104,28 @@ function Navbars() {
     });
   };
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isScrolledUp = prevScrollPos > currentScrollPos && currentScrollPos > 0;
+      setShowNavbar(isScrolledUp || currentScrollPos <= 0);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
 
-    <div className="ids" style={{}}>
-    <div id="app" className='container-fluid'>
-      <div className="bodys">
+    <div className="ids">
+     <div id="app" className='container-fluid'>
+    <div className="bodys">
     <p className='title'>PERFORMANCE AMPLIFIED</p>
     {window.innerWidth > 450 ? (
         <p className='subtitle'>NEW McLAREN <br />ARTURA SPIDER</p>
@@ -101,9 +133,11 @@ function Navbars() {
         <p className='subtitle'>NEW McLAREN ARTURA SPIDER</p>
     )}
     <button>DISCOVER MORE</button>
-</div>
+    </div>
+
+
       
-    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%' }}>
+<div style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 100, display: showNavbar ? 'block' : 'none', background: showNavbar ? (prevScrollPos > 0 ? 'linear-gradient(196deg ,#181c20, #363f44 )': 'transparent') : 'transparent', opacity: showNavbar ? 1 : 0 }}>
         <div className="navbar-container">
           <Navbar expand="lg" className="navbar-custom d-flex" style={{ backgroundColor: 'transparent' }}>
           <div className="d-flex align-items-center">
@@ -151,7 +185,7 @@ function Navbars() {
               }}
             >
               <Offcanvas.Header closeButton>
-              <img src={logo} alt="" />
+              <img src={logo} alt="" className='logos' style={{height:'63%'}}/>
               </Offcanvas.Header>
               <Offcanvas.Body className="offcanvas-body">
               <div className='d-flex text-white'>
@@ -166,7 +200,7 @@ function Navbars() {
               </div>
               <div className='d-flex text-white'>
               <div>
-              <img src='src/assets/o3.png' alt="cars" className='me-3 pt-5 carrs'/>
+              <img src={car2} alt="cars" className='me-3 pt-5 carrs'/>
               <p style={{textAlign:'center',marginTop:'10px',marginRight:'40px'}}>75OS</p>
               </div>
               <div>
@@ -264,7 +298,7 @@ function Navbars() {
         </div>
         </Offcanvas.Body>
       </Offcanvas>
-      <Offcanvas show={showOffcanvasULTIMATE} onHide={() => setShowOffcanvasULTIMATE(false)} placement="top" style={{  background: 'linear-gradient(196deg ,#181c20, #363f44 )', border: 'none' ,height:'450px'}}>
+      <Offcanvas show={showOffcanvasULTIMATE} onHide={() => setShowOffcanvasULTIMATE(false)} placement="top" style={{  background: 'linear-gradient(196deg ,#181c20, #363f44 )', border: 'none' ,height:'400px'}}>
         <Offcanvas.Header closeButton>
         <Offcanvas.Title style={{marginLeft:'60px'}}>
         <img src={logo} alt="" />

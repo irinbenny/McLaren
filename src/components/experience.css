@@ -1,34 +1,61 @@
 .image {
     position: relative;
-    background-image: url('../assets/bg1.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.305), rgba(0, 0, 0, 0.207)),url('../assets/bg1.webp');
     background-size: cover;
     background-position: center;
-    height: 650px;
+    height: 780px;
     background-repeat: no-repeat;
 }
 
 
 .paragraph {
     position: absolute;
-    top: 150px;
-    left: 60px;
+    top: 140px;
+    left: 85px;
 }
 
-.paragraph p {
+
+.parass{
+    color: rgb(255, 255, 255);
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    font-size: 1.6rem;
+    
+}
+.parasss{
     font-size: 100px;
-    line-height: 1;
-}
-
-.p12{
-   margin-bottom: 0;
+    line-height: 100px;
+    margin-bottom:0;
    color:white;
-   font-family:'Courier New", Arial';
-   font-size: 100px;
+   font-weight: 100;
+    letter-spacing: 2px;
+
+}
+.btn55 {
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.392);
+    font-family: soho-gothic-pro, Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 0.7rem 6.2rem;
+    margin-top: 25px;
 }
 
 @media screen and (max-width:600px){
-    .paragraph p {
-        font-size: 30px;
-        line-height: 1;
+    .parass{
+        font-size: 1.2rem;
+    }
+    .parasss{
+        font-size: 37px;
+    line-height: 38px;
+    }
+    
+    .paragraph{
+        top: 190px;
+        left: 20px;
+    }
+    .image{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://mclaren.scene7.com/is/image/mclaren/Z72_5512:crop-3x4?wid=828&hei=1104');
+        height: 491px;
     }
 }

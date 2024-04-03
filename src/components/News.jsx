@@ -37,7 +37,7 @@ function Shop() {
             <div className='d-flex covered'>
                 <h3>LATEST NEWS</h3>
                 <div>
-                    <button className='btn1'>VIEW ALL</button>
+                    <button className='btn2'>VIEW ALL</button>
                 </div>
             </div>
             <div className="scroll">

@@ -46,12 +46,19 @@
   list-style: none;
   width: 25rem; 
 }
-
-
-
-
-
-
+.btn2 {
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.392);
+  font-weight: 600;
+  padding: 12px 20px;
+  margin-bottom: 5px;
+  font-family: soho-gothic-pro, Arial, sans-serif;
+  color: #363f44;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -75,5 +82,14 @@ margin-top: 40px;
 .news-title h3{
   font-size: 30px;
 }
-
+.btn2{
+  margin-left: 1px;
+}
+.slider{
+  margin-left: 1px;
+  margin-top: 0.5rem;
+}
+ul {
+  padding-left: 0.1rem;
+}
 }
