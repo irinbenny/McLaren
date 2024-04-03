@@ -374,4 +374,13 @@
     width:178px;
     height: 85px;
   }
+  #app:hover {
+    background-position-x: initial; /* Reset background position on hover for smaller screens */
+  }
+  #app:hover .bodys p,
+  #app:hover .bodys .title,
+  #app:hover .bodys .subtitle,
+  #app:hover .bodys button {
+    transform: none; /* Reset transform on hover for smaller screens */
+  }
   }
